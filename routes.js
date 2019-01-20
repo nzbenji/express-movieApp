@@ -2,14 +2,15 @@ const express = require('express')
 const router = express.Router()
 
 const moviesJSON = require('./movies.json')
-
+const movies = moviesJSON.movies
 const data = {
     title: 'Star wars movies',
-    movies: ['The first movie', 'The second movie', 'The third movie']
+    movies: movies
 }
 
 //Routes
 router.get('/', (req, res) => {
+    
     res.render('home', data)
 })
 

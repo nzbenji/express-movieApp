@@ -7,6 +7,9 @@ app.listen(port, () => {
 })
 
 const routes = require('./routes')
+const path = require('path')
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.engine('.hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');

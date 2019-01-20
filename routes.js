@@ -16,12 +16,19 @@ router.get('/', (req, res) => {
 
 router.get('/star_wars_episode/:id', (req, res) => {
     const episode_id = req.params.id
-    res.send("this is episode " + episode_id)
+    const movie = movies[episode_id - 1]
+    const title = movie.title
+    res.render('movie_single', {
+        moives: movies,
+        title: title
+    })
 })
 
 router.get('*', (req, res) => {
     res.send('Page not found')
 })
+
+
 
 
 

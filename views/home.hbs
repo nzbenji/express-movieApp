@@ -1,9 +1,10 @@
-<h1>This is the template for the home page</h1>
+<h1>Star Wars movie homepage</h1>
 
 <p>{{ title }}</p>
 
 
     {{#each movies}}
-    
+    <h2>{{title}}</h2>
     <img src="/images/{{{poster}}}" >
+    <p>{{description}}</p>
     {{/each}}

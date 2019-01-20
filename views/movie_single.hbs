@@ -1,1 +1,18 @@
-<h1>{{title}}</h1>
+
+<h1>{{movie.title}}</h1>
+<img src="/images/{{movie.hero_image}}" >
+<div>
+    <img src="/images/{{movie.poster}}" alt="">
+    <h2>Description</h2>
+    <p>{{movie.description}}</p>
+</div>
+
+<div>
+    <h2>Main Characters</h2>
+    <ul>
+        {{#each movie.main_characters}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+    
+</div>
